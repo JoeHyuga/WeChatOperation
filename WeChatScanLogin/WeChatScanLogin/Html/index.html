@@ -10,15 +10,20 @@
     <!--<link href="../Style/layui/css/layui.css" rel="stylesheet" />-->
 </head>
 <body>
-    <input  type="button" value="创建二维码" onclick="create_qrcode()"/>
-    <img  width="140px" height="140px" id="qrcode"/>
+    <input type="button" value="创建二维码" onclick="create_qrcode()" />
+    <img width="140px" height="140px" id="qrcode" />
     <input type="text" id="txt1" />
     <br /><br />
-    <input  type="button" value="layui-tips" id="utips" onclick="Tips()"/>
-    
+    <input type="button" value="layui-tips" id="utips" onclick="Tips()" />
+    <input type="button" value="alert" onclick="alert(1);" />
+    <input type="button" value="alert" onclick="alert(1);" />
+    <input type="button" value="alert" onclick="alert(1);" />
+    <input type="button" value="alert" onclick="alert(1);" />
+    <input type="button" value="alert" onclick="alert(1);" />
+    <input type="button" value="alert" onclick="alert(1);" />
     <script>
         //alert(location.href);
-        function Tips(){
+        function Tips() {
             if ($("#txt1").val() == "") {
                 layer.tips('数据不能为空', '#txt1', {
                     tisps: [4, '#ffcc99'],
@@ -38,7 +43,7 @@
                 dataType: "json",
                 success: function (data) {
                     //location.href = data;
-                        $("#qrcode").attr("src", data);
+                    $("#qrcode").attr("src", data);
                 },
                 error: function () { }
             });
